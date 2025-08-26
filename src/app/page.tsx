@@ -54,7 +54,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>Data is automatically saved to your browser's local storage</p>
+          <p>Data is automatically saved to your browser&apos;s local storage</p>
         </div>
       </div>
     </main>

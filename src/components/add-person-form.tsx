@@ -34,7 +34,7 @@ export function AddPersonForm({ onAddPerson }: AddPersonFormProps) {
       <form onSubmit={handleSubmit} className="flex gap-3">
         <div className="flex-1">
           <label htmlFor="person-name" className="sr-only">
-            Person's name
+            Person&apos;s name
           </label>
           <input
             type="text"

@@ -23,12 +23,12 @@ export function useStarData() {
         const parsedData = JSON.parse(stored);
         // Convert date strings back to Date objects
         const processedData: StarData = {
-          people: parsedData.people.map((person: any) => ({
+          people: parsedData.people.map((person: Person & { dateAdded: string; lastStarDate?: string }) => ({
             ...person,
             dateAdded: new Date(person.dateAdded),
             lastStarDate: person.lastStarDate ? new Date(person.lastStarDate) : undefined,
           })),
-          actions: parsedData.actions.map((action: any) => ({
+          actions: parsedData.actions.map((action: StarAction & { timestamp: string }) => ({
             ...action,
             timestamp: new Date(action.timestamp),
           })),
@@ -117,8 +117,8 @@ export function useStarData() {
 
   const getSortedPeople = useCallback(() => {
     const sorted = [...data.people].sort((a, b) => {
-      let aValue: any;
-      let bValue: any;
+      let aValue: string | number;
+      let bValue: string | number;
 
       switch (sortBy) {
         case 'name':
