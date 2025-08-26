@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Gold Star Tracker
 
-## Getting Started
+A beautiful and intuitive application to track and celebrate achievements with a gold star system. Perfect for teams, families, classrooms, or any group where you want to recognize and motivate positive behavior.
 
-First, run the development server:
+## ✨ Features
 
+- **⭐ Star Management** - Add and remove gold stars with optional reasons
+- **👥 People Management** - Add and remove people from your tracking list
+- **📊 Interactive Dashboard** - View stats, top performers, and recent activity
+- **📋 Kanban-Style Table** - Sortable table with intuitive controls
+- **💾 Auto-Save** - Data automatically saved to browser local storage
+- **🌙 Dark Mode** - Built-in dark mode support
+- **📱 Responsive Design** - Works perfectly on all devices
+- **🚀 Real-time Updates** - Instant feedback and updates
+
+## 🛠️ Tech Stack
+
+- [Next.js 15](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Geist Font](https://vercel.com/font) - Typography
+- [ESLint](https://eslint.org/) - Code linting
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd stickerapp
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3001](http://localhost:3001) in your browser (or whatever port is shown in your terminal)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Add People**: Use the "Add New Person" form to add someone to your tracking list
+2. **Give Stars**: Click the "+ Star" button next to anyone's name to give them a gold star
+3. **Remove Stars**: Click the "- Star" button to remove a star (with optional reason)
+4. **Sort & Filter**: Click column headers to sort by name, stars, date added, or last star date
+5. **View Stats**: See overview statistics and top performers at the top of the dashboard
+6. **Remove People**: Use the "Remove" button to completely remove someone from the list
 
-## Learn More
+## 💾 Data Storage
 
-To learn more about Next.js, take a look at the following resources:
+All data is automatically saved to your browser's local storage, so your star tracking persists between sessions. No account or server required!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run type-check` - Run TypeScript type checking
+- `npm run clean` - Clean build artifacts
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/                      # App Router pages
+│   ├── globals.css          # Global styles
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Main dashboard page
+├── components/              # React components
+│   ├── add-person-form.tsx  # Form to add new people
+│   ├── navigation.tsx       # Top navigation bar
+│   ├── star-stats.tsx       # Statistics dashboard
+│   └── star-table.tsx       # Main kanban-style table
+├── hooks/                   # Custom React hooks
+│   └── useStarData.ts       # Data management hook
+├── types/                   # TypeScript type definitions
+│   └── index.ts             # Star tracker interfaces
+public/                      # Static assets
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Customization
+
+### Colors
+The project uses Tailwind CSS with a custom color palette. You can modify colors in `tailwind.config.ts`.
+
+### Typography
+The project uses Geist fonts. You can change fonts in `src/app/layout.tsx`.
+
+### Components
+All components are in the `src/components` directory and are fully typed with TypeScript.
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com)
+3. Deploy with zero configuration
+
+### Other Platforms
+The app can be deployed to any platform that supports Node.js:
+- Netlify
+- Railway
+- Heroku
+- AWS
+- Google Cloud
+
+## 📊 Performance
+
+This template is optimized for Core Web Vitals:
+- **LCP** - Optimized images and fonts
+- **FID** - Minimal JavaScript bundle
+- **CLS** - Proper layout shift prevention
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) team for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility classes
+- [Vercel](https://vercel.com/) for the font and deployment platform
